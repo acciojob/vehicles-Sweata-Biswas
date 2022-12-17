@@ -3,8 +3,10 @@ package com.driver;
 public class F1 extends Car {
 
     public F1(String name, boolean isManual) {
+
         //Use arbitrary values for parameters which are not mentioned
-            super(name, isManual);
+            super(name);
+            super.setManual(isManual);
     }
 
     public void accelerate(int rate){
@@ -30,7 +32,7 @@ public class F1 extends Car {
 
         if(newSpeed > 0) {
             changeSpeed(newSpeed, getCurrentDirection());
-            if(newSpeed>=1 && newSpeed<=50){
+            if(newSpeed>0 && newSpeed<=50){
                 changeGear(1);
             }else if(newSpeed>=51 && newSpeed<=100){
                 changeGear(2);

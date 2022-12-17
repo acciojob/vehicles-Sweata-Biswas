@@ -20,10 +20,11 @@ public class Car extends Vehicle {
         this.type = type;
         this.seats = seats;
     }
-    public Car(String name,boolean isManual){
+
+    public Car(String name) {
         super(name);
-        this.isManual = isManual;
     }
+
     public int getDoors(){
         return this.doors;
     }
@@ -45,6 +46,10 @@ public class Car extends Vehicle {
 
     public String getType() {
         return this.type;
+    }
+
+    public void setManual(boolean manual) {
+        isManual = manual;
     }
 
     public void changeGear(int newGear){
