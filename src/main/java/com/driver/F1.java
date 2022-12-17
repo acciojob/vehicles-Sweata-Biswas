@@ -19,7 +19,7 @@ public class F1 extends Car {
          * speed more than 250: gear 6
          */
 
-        newSpeed += newSpeed + rate;
+        newSpeed += rate;
 
         if(newSpeed == 0) {
             stop();
