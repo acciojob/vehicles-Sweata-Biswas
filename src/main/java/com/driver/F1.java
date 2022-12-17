@@ -24,14 +24,15 @@ public class F1 extends Car {
         newSpeed += rate;
 
         if(newSpeed == 0) {
-            stop();
             changeGear(1);
+            stop();
+
             //Stop the car, set gear as 1
         }
         //for all other cases, change the gear accordingly
 
         if(newSpeed > 0) {
-            changeSpeed(newSpeed, getCurrentDirection());
+//            changeSpeed(newSpeed, getCurrentDirection());
             if(newSpeed>0 && newSpeed<=50){
                 changeGear(1);
             }else if(newSpeed>=51 && newSpeed<=100){
